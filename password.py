@@ -11,3 +11,9 @@ def saveaccount(account):
 def createcredential(credentialname,password,email):
     new_account2 = Passwords(credentialname,password,email)
     return new_account2
+
+def savecredential(password):
+     password.savepassword()     
+
+def getcredential(credentialname):
+    return Passwords.find_by_credential(credentialname)    
