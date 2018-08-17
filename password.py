@@ -16,4 +16,15 @@ def savecredential(password):
      password.savepassword()     
 
 def getcredential(credentialname):
-    return Passwords.find_by_credential(credentialname)    
+    return Passwords.find_by_credential(credentialname)
+
+def main():
+    print("Hello Welcome to your password list. What is your name?")
+    user_name = input()
+
+    print(f"Hello {user_name}. what would you like to do?")
+    print('\n')
+    print("Use these short codes : , ca - create account, ex -exit application")
+
+if _name_ == 'name'
+   main()       
