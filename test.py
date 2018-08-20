@@ -27,6 +27,29 @@ class testContact(unittest.TestCase):
         self.new_account.saveaccount() # saving the new contact
         self.assertEqual(len(Account.account_list),1) 
     
+    def test_save_multiple_Account(self):
+        '''
+        test_save_contact test case to test if the contact object is saved into
+        the contact list
+        '''
+        self.new_account.saveaccount() # saving the new contact
+        test_account = Account("Test","user","test@user.com") # new contact
+        test_account.saveaccount()
+        self.assertEqual(len(Account.account_list),3)
+
+    #  def test_find_by_credential(self):
+    #     '''
+    #     test_save_contact test case to test if the contact object is saved into
+    #     the contact list
+    #     '''
+    #     self.new_account.saveaccount() # saving the new contact
+    #     test_account = Account("Test","user","test@user.com") # new contact
+    #     test_account.saveaccount()
+
+    #     found_credential = Account.find_by_credential("facebook")
+
+    #     self.assertEqual(found_contact.email,test_contact.email) 
+         
 
 if __name__ == '__main__':
     unittest.main() 
