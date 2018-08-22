@@ -13,7 +13,10 @@ def createcredential(credentialname,password,email):
     return new_account2
 
 def savecredential(password):
-     password.savepassword()     
+     password.savepassword()
+
+def check_existing_password(credentialname):
+    return Passwords.find_by_credential(credentialname)         
 
 def getcredential(credentialname):
     return Passwords.find_by_credential(credentialname)
@@ -100,13 +103,13 @@ def main():
                             print("Enter the name of crdential you want to search for?")
 
                             search_credential = input()
-                            if getcredential(search_credential):
-                                    check_existing_credential = getcredential(search_credential)
-                                    print(f"{check_existing_credential.credentialname} {check_existing_credential.password}")
+                            if check_existing_password(search_credential):
+                                    check_credential = getcredential(search_credential)
+                                    print(f"{check_credential.credentialname} {check_credential.password}")
                                     print('-' * 20)
 
-                                    print(f"Credential.......{search_credential.credentialname}")
-                                    print(f"password.......{search_credential.email}")
+                                    print(f"Credential.......{check_credential.credentialname}")
+                                    print(f"password.......{check_credential.email}")
                             else:
                                     print("That credential does not exist")
                                     print("Use these short codes :cr - create credential, fp -find a password, ex -log out") 

@@ -49,12 +49,12 @@ class testContact(unittest.TestCase):
         the contact list
         '''
         self.new_account.saveaccount() # saving the new contact
-        test_account = Account("Test","user","test@user.com") # new contact
+        test_account = Account("facebbok","konshens","test@user.com") # new contact
         test_account.saveaccount()
 
-        found_credential =  Passwords.find_by_credential("user")
+        found_credential =  Passwords.find_by_credential("facebook")
 
-        self.assertEqual(found_credential.email,test_account.email) 
+        self.assertEqual(found_credential.credential,test_account.email) 
          
 
 if __name__ == '__main__':
