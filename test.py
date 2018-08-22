@@ -48,13 +48,13 @@ class testContact(unittest.TestCase):
         test_save_contact test case to test if the contact object is saved into
         the contact list
         '''
-        self.new_account.saveaccount() # saving the new contact
-        test_account = Account("facebbok","konshens","test@user.com") # new contact
-        test_account.saveaccount()
+        self.new_password.savepassword() 
+        test_password = Passwords("konshens","kabagemark@gmail.com","facebook") # new contact
+        test_password.savepassword()
 
         found_credential =  Passwords.find_by_credential("facebook")
 
-        self.assertEqual(found_credential.credential,test_account.email) 
+        self.assertEqual(found_credential.password , test_password.email) 
          
 
 if __name__ == '__main__':

@@ -13,6 +13,7 @@ class Passwords:
     def __init__(self,password,email,credentialtype):
         self.password = password
         self.email = email
+        self.credentialtype = credentialtype
 
     def savepassword(self):
         Passwords.password_list.append(self)
