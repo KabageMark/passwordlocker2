@@ -27,7 +27,11 @@ End with an example of getting some data out of the system or using it for a lit
 
 # Running the tests
 
-**run the code python3.6 run.py**
+**run the code python3.6 test.py**
+
+# Running the app
+
+**run the code python3.6 password.py**
 choose any of the short-codes for any given activity that you want  
 
 # Built With
