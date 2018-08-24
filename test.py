@@ -38,8 +38,8 @@ class testContact(unittest.TestCase):
         test_save_contact test case to test if the contact object is saved into
         the contact list
         '''
-        self.new_account.saveaccount() # saving the new contact
-        test_account = Account("Test","user","test@user.com") # new contact
+        self.new_account.saveaccount() 
+        test_account = Account("Test","user","test@user.com") 
         test_account.saveaccount()
         self.assertEqual(len(Account.account_list),2)
 

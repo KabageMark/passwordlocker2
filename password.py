@@ -1,5 +1,5 @@
 from dataclass import Account,Passwords
-
+import hashlib
 
 def createaccount(firstname,lastname,email):
     new_account = Account(firstname,lastname,email)
@@ -9,7 +9,7 @@ def saveaccount(account):
      account.saveaccount()    
 
 def createcredential(credentialname,password,email):
-    new_account2 = Passwords(credentialname,password,email)
+    new_account2 =Passwords(credentialname,password,email)
     return new_account2
 
 def savecredential(password):
