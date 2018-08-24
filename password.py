@@ -22,7 +22,7 @@ def getcredential(credentialname):
     return Passwords.find_by_credential(credentialname)
 
 def main():
-    print("Hello Welcome to your password list. What is your name?")
+    print("Hello Welcome to your password locker. What is your name?")
     user_name = input()
 
     print(f"Hello {user_name}. what would you like to do?")
@@ -93,14 +93,14 @@ def main():
 
                             savecredential(createcredential(credentialname,password,email)) 
                             print ('\n')
-                            print(f"New Credetnial {credentialname} {password} created")
+                            print(f"New Password {credentialname} {password} created")
                             print("Use these short codes :cr - create credential, fp -find a password, ex -log out") 
                             print ('\n')
                                   
                     
                     if short_code == 'fp':
 
-                            print("Enter the name of crdential you want to search for?")
+                            print("Enter the name of credential you want to search for?")
 
                             search_credential = input()
                             if check_existing_password(search_credential):
